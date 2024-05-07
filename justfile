@@ -10,5 +10,5 @@ run-arena-example:
   ./{{ARENA_EXAMPLE}}
 
 clean:
-	rm {{ARENA_OBJ_FILE}}
+  rm {{ARENA_OBJ_FILE}}
   rm {{ARENA_EXAMPLE}}
