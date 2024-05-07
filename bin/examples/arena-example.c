@@ -1,4 +1,5 @@
 #include <arena.h>
+#include <stdio.h>
 
 int main() {
   // Initialise a uint8 arena region
