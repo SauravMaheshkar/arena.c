@@ -1,6 +1,6 @@
 # `arena.c`
 
-C library for Arena based memory management
+C library for Arena based memory management, for example usage refer to `bin/examples/`
 
 ### Resources
 
