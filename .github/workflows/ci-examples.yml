@@ -1,0 +1,29 @@
+name: "Run examples"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ci-examples.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/ci-examples.yml"
+  release:
+    types: [created]
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - run: sudo snap install --edge --classic just
+
+      - name: Run Arena Example
+        run: just run-arena-example
